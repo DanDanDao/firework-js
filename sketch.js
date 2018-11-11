@@ -7,12 +7,11 @@ function setup() {
   gravity = createVector(0, 0.2);
   stroke(255);
   strokeWeight(4);
-  background(1000);
 }
 
 function draw() {
   colorMode(RGB);
-  background(1, 0, 0, 25);
+  background(7, 11, 32, 255);
   if (random(1) < 0.1) {
     fireworks.push(new Firework());
   }
@@ -23,5 +22,4 @@ function draw() {
       fireworks.splice(i,1);
     }
   }
-  console.log(fireworks.length);
 }

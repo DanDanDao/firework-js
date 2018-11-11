@@ -1,4 +1,3 @@
-
 function Particle(x, y, hu, firework) {
   this.pos = createVector(x,y);
   this.firework = firework;
@@ -38,10 +37,14 @@ function Particle(x, y, hu, firework) {
   this.show = function() {
     colorMode(HSB);
     if (!this.firework) {
-      strokeWeight(2);
-      stroke(hu, 255, 255, this.lifespan);
+      strokeWeight(5);
+      if (random(1) < 0.2) {
+        stroke(random(100, 255), random(100, 255), random(100, 255), this.lifespan);
+      } else {
+        stroke(hu, 255, 255, this.lifespan);
+      }
     } else {
-      strokeWeight(4);
+      strokeWeight(5);
       stroke(hu, 255, 255);
     }
     point(this.pos.x, this.pos.y);
