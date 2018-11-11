@@ -39,7 +39,7 @@ function Particle(x, y, hu, firework) {
     if (!this.firework) {
       strokeWeight(5);
       if (random(1) < 0.2) {
-        stroke(random(100, 255), random(100, 255), random(100, 255), this.lifespan);
+        stroke(random(150, 255), random(150, 255), random(150, 255), this.lifespan);
       } else {
         stroke(hu, 255, 255, this.lifespan);
       }
